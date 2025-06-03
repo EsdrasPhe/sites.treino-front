@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Cabana</title>
+    <link rel="stylesheet" href="produto1.css">
+    <script src=></script>
+</head>
+
+<header id="topo">
+    <h1><a href="home.html" class="inicial">Base<br>Cabana</a></h1>
+
+    <nav class="menu">
+        <a href="#">Taco</a></h2>
+        <a href="roupas.html">Roupas</a></h2>
+        <a href="#">História</a></h2>
+        <a href="#">Projetos</a></h2>
+    </nav>
+    
+    <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+
+   
+</header>
+
+<body>
+    <div class="fundo-base"></div>
+  <div class="fundo-intermediario">
+    <img src="produto1/receptor_produto.PNG" alt="Imagem intermediária">
+  </div>
+    <main class="produto-container">
+        <div class="produto-imagem">
+            <img src="produto1/camisa1.png" alt="Nome do Produto">
+        </div>
+        <div class="produto-info">
+            <h2>Camisa Golden State</h2>
+            <p>Este é um produto de alta qualidade, ideal para suas necessidades de aventura ao ar livre.</p>
+            <p class="preco">R$ 199,99</p>
+            <a href="carrinho.html" id="open-modal" class="btn">Comprar</a>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Adicionar Cartão</h2>
+            <form id="add-card-form">
+                <div class="form-group">
+                    <label for="card-number">Número do Cartão</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nome do Titular</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Nome como no cartão" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Data de Validade</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <button type="submit" class="botao-ad">Adicionar Cartão</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="cartao.js"></script>
+</body>
+
+
+<div class="overlay"></div>
+</html>

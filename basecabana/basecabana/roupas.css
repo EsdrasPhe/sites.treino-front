@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-weight: bold;
+}
+
+h1 a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.titulo_catalogo{
+    color: white;
+    font-size: 2rem;
+}
+
+nav{
+    margin-left: 30rem;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    margin-left: 4rem;
+    font-weight: 600;
+    font-weight: bold;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #097000;
+    border-bottom: 3px solid #097000;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color:  #030303;
+    margin: 0;
+    background-image: url(background.jpg);
+    background-size: cover;     
+    background-position: center;  
+    background-attachment: fixed;  
+    margin: 0;
+    padding: 20px;
+    opacity: 1;  
+}
+
+.nav-button {
+  margin: 10px;
+  background: #3395ff;
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: #025309;
+}
+
+.botoes{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.indicators {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.active {
+  background: #005a14;
+}
+
+.fundo-intermediario {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    z-index: 0; 
+    pointer-events: none;
+}
+  
+.fundo-intermediario img {
+    height: 700px; 
+    opacity: 0.95;
+}
+  
+  
+header{
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    margin-bottom: 3rem;
+    opacity: 1;
+}
+
+
+.sobre-base-cabana {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.imagem-baseball {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.1);
+}
+
+.texto-base-cabana {
+    max-width: 600px;
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+  
+.texto-base-cabana h2 {
+    margin-top: 0;
+    color: #006905;
+}
+
+.footer{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 3em;
+    position: relative;
+}
+
+.footer a{
+    margin: 0 0.4em;
+    font-size: 1.2em;
+}
+
+.footer .play-icon {
+    border: 3px #fff solid;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1.3em;
+    box-shadow: 0px 0px 15px #fff;
+    margin-right: 0.8em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer .play-icon:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 0px transparent;
+}
+
+.footer,
+.footer .watch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.catalogo-page{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 4rem;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+}
+
+.catalogo-page {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 4rem;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    display: none;
+    overflow-x: hidden;
+}
+
+.catalogo-page.active {
+  display: flex; /* ou block, conforme seu layout */
+}
+
+.produto {
+    background-color: #043106;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+    min-width: 200px;
+    flex-shrink: 0;
+    text-align: center;
+    transition: transform 0.2s;
+    margin-right: 5rem;
+    opacity: 0.8;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    background-color: #043106;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;;
+}
+
+.produto img:hover {
+    transform: scale(1.15);
+     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* escurece o fundo */
+    z-index: -1;
+    pointer-events: none;
+}
+
