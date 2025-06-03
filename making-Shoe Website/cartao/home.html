@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <script rel=></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Nike</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div>
+                    <img src="logo.png" alt="logo" class="logo">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Novo lançamento</a></li>
+                            <li><a href="#">Homem</a></li>
+                            <li><a href="#">Mulher</a></li>
+                            <li><a href="#">Criança</a></li>
+                            <li><a href="#">Categorias</a></li>
+                        </ul>
+                        <form action="">
+                            <div class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <input type="text" class="search" placeholder="Search..."/>
+                            <button class="nav-btn" id="carrinho">
+                                <i class="fas fa-cart-plus"></i> (0) <!-- Inicia com 0 itens -->
+                            </button>
+                        </form>
+                    </div> <!-- Fecha a div.menu -->
+                </div> <!-- Fecha a div do logo e menu -->
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="body">
+            <div>
+                <h4>499,99R$</h4>
+                <h1>Nike SupeRep Go</h1>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint earum ab, tenetur labore itaque nihil iure cumque, voluptatibus nam dolorem autem rem molestiae accusantium nesciunt possimus, culpa atque est architecto!</p>
+                <a href="carrinho.html" id="open-modal" class="btn">Comprar</a>
+                <button class="nav-btn" id="add-carrinho">
+                    <i class="fas fa-cart-plus"></i>
+                </button>
+            </div>
+            <div>
+                <img src="shoe.png" alt="Nike SuperRep Go">
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nike/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Nike" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="watch">
+                <div class="play-icon" id="open-video-modal">
+                    <i class="fas fa-play"></i>
+                </div>
+                <h3>Preview</h3>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal para adicionar cartão -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2></h2>
+            <form id="add-card-form">
+                <div class="form-group">
+                    <label for="card-number">Número do Cartão</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nome do Titular</label>
+                    <input type="text" id="card-name" name="card-name" placeholder="Nome como no cartão" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Data de Validade</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <button type="submit" class="botao-ad">Adicionar Cartão</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para o carrinho -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-cart-modal" class="close">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-items">
+                <!-- Itens do carrinho serão exibidos aqui -->
+                <p>Nenhum item no carrinho.</p>
+                
+            </div>
+            <button id="clear-cart" class="btn-clear">Limpar Carrinho</button>
+            <a id="open-modal" class="btn2">Comprar</a>
+        </div>
+    </div>
+
+    
+    <!-- Modal para o vídeo do YouTube -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-video-modal" class="close">&times;</span>
+            <h2>Vídeo Preview</h2>
+            <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/RQsEZpNpXqM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script src="cartao.js"></script>
+</body>
+</html>
